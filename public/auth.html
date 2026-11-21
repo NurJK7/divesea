@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in — DiveSea</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="site-header"></header>
+  <main class="container page">
+    <section class="panel">
+      <div class="tabs" role="tablist">
+        <button class="tab is-active" id="tab-login" type="button" data-mode="login">Log in</button>
+        <button class="tab" id="tab-register" type="button" data-mode="register">Sign up</button>
+      </div>
+      <form id="auth-form" novalidate>
+        <label class="label" for="username">Username</label>
+        <input class="input" id="username" autocomplete="username" maxlength="20">
+        <div id="email-row" hidden>
+          <label class="label" for="email">Email</label>
+          <input class="input" id="email" type="email" autocomplete="email" maxlength="100" placeholder="you@example.com">
+        </div>
+        <div id="nick-row" hidden>
+          <label class="label" for="nickname">Nickname</label>
+          <input class="input" id="nickname" maxlength="20" placeholder="Shown on your profile">
+        </div>
+        <label class="label" for="password">Password</label>
+        <input class="input" id="password" type="password" autocomplete="current-password" maxlength="64">
+        <div id="confirm-row" hidden>
+          <label class="label" for="confirm">Repeat password</label>
+          <input class="input" id="confirm" type="password" autocomplete="new-password" maxlength="64">
+        </div>
+        <button class="link-btn" id="forgot-btn" type="button">Forgot password?</button>
+        <p class="error" id="auth-error" role="alert"></p>
+        <button class="btn btn--dark btn--block" id="auth-submit" type="submit">Log in</button>
+      </form>
+      <p class="note" id="auth-note" hidden>New accounts get a virtual balance of 10 ETH for buying NFTs.</p>
+    </section>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

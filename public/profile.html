@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My profile — DiveSea</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="site-header"></header>
+  <main class="container page">
+    <div class="profile__cover"><img src="images/nft-pink.png" alt=""></div>
+    <div class="profile__head">
+      <img class="profile__avatar" id="avatar" src="images/avatar.svg" alt="Avatar">
+      <div class="profile__name">
+        <h1 id="nick"></h1>
+        <p class="muted" id="uname"></p>
+      </div>
+      <div class="profile__actions">
+        <button class="btn btn--dark" id="edit-btn" type="button">Edit profile</button>
+        <button class="btn btn--light" id="logout-btn" type="button">Log out</button>
+      </div>
+    </div>
+    <dl class="stats stats--profile">
+      <div><dt>Balance</dt><dd id="st-balance">0 ETH</dd></div>
+      <div><dt>NFTs owned</dt><dd id="st-owned">0</dd></div>
+      <div><dt>Bids placed</dt><dd id="st-bids">0</dd></div>
+    </dl>
+    <div class="tabs" role="tablist">
+      <button class="tab is-active" type="button" data-tab="collection">Collection</button>
+      <button class="tab" type="button" data-tab="activity">Activity</button>
+      <button class="tab" type="button" data-tab="listings">My listings</button>
+    </div>
+    <section id="tab-collection"><div class="grid" id="collection"></div></section>
+    <section id="tab-activity" hidden><ul class="activity" id="activity"></ul></section>
+    <section id="tab-listings" hidden><div class="grid" id="listings"></div></section>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <div class="modal" id="edit-modal" role="dialog" aria-modal="true" aria-labelledby="edit-title" hidden>
+    <div class="modal__box">
+      <button class="modal__close" id="edit-close" type="button" aria-label="Close">×</button>
+      <h2 id="edit-title">Edit profile</h2>
+      <form id="edit-form" novalidate>
+        <img class="profile__avatar profile__avatar--small" id="edit-preview" src="images/avatar.svg" alt="">
+        <label class="label" for="edit-avatar">Photo (JPEG, PNG or WebP)</label>
+        <input class="input" id="edit-avatar" type="file" accept="image/jpeg,image/png,image/webp">
+        <label class="label" for="edit-nick">Nickname</label>
+        <input class="input" id="edit-nick" maxlength="20">
+        <p class="error" id="edit-error" role="alert"></p>
+        <button class="btn btn--dark btn--block" type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="sell-modal" role="dialog" aria-modal="true" aria-labelledby="sell-title" hidden>
+    <div class="modal__box">
+      <button class="modal__close" id="sell-close" type="button" aria-label="Close">×</button>
+      <h2 id="sell-title">Sell NFT</h2>
+      <p class="modal__sub" id="sell-sub"></p>
+      <form id="sell-form" novalidate>
+        <label class="label" for="sell-price">Price (ETH)</label>
+        <input class="input" id="sell-price" inputmode="decimal" placeholder="1.00" autocomplete="off">
+        <label class="label" for="sell-type">Sale type</label>
+        <select class="input" id="sell-type">
+          <option value="instant">Instant sale (Buy now)</option>
+          <option value="auction">Auction (bids)</option>
+        </select>
+        <label class="label" for="sell-duration">Listing time</label>
+        <select class="input" id="sell-duration">
+          <option value="1">1 minute</option>
+          <option value="5">5 minutes</option>
+          <option value="60">1 hour</option>
+          <option value="1440" selected>24 hours</option>
+          <option value="4320">3 days</option>
+        </select>
+        <p class="error" id="sell-error" role="alert"></p>
+        <button class="btn btn--dark btn--block" type="submit">Put on marketplace</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="nft-edit-modal" role="dialog" aria-modal="true" aria-labelledby="nft-edit-title" hidden>
+    <div class="modal__box">
+      <button class="modal__close" id="nft-edit-close" type="button" aria-label="Close">×</button>
+      <h2 id="nft-edit-title">Edit listing</h2>
+      <form id="nft-edit-form" novalidate>
+        <div id="nft-edit-title-row">
+          <label class="label" for="nft-edit-name">Title</label>
+          <input class="input" id="nft-edit-name" maxlength="40" autocomplete="off">
+        </div>
+        <label class="label" for="nft-edit-price">Price (ETH)</label>
+        <input class="input" id="nft-edit-price" inputmode="decimal" autocomplete="off">
+        <label class="label" for="nft-edit-type">Sale type</label>
+        <select class="input" id="nft-edit-type">
+          <option value="instant">Instant sale (Buy now)</option>
+          <option value="auction">Auction (bids)</option>
+        </select>
+        <p class="error" id="nft-edit-error" role="alert"></p>
+        <button class="btn btn--dark btn--block" type="submit">Save changes</button>
+      </form>
+    </div>
+  </div>
+  <script src="config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

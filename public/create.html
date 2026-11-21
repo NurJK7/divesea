@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sell Artwork — DiveSea</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="site-header"></header>
+  <main class="container page">
+    <section class="panel">
+      <h1 class="page-title">Sell Artwork</h1>
+      <p class="muted">Create a new NFT listing. You can delete it later in your profile until it is sold.</p>
+      <form id="create-form" novalidate>
+        <label class="label" for="n-title">Title</label>
+        <input class="input" id="n-title" maxlength="40">
+        <label class="label" for="n-image">Artwork (JPEG, PNG or WebP)</label>
+        <input class="input" id="n-image" type="file" accept="image/jpeg,image/png,image/webp">
+        <p class="note">The picture is cropped to a square, like every NFT in the marketplace.</p>
+        <img class="card__img" id="n-preview" alt="" hidden style="max-width:220px;margin-top:10px">
+        <label class="label" for="n-price">Price, ETH</label>
+        <input class="input" id="n-price" inputmode="decimal" placeholder="1.00" autocomplete="off">
+        <label class="label" for="n-type">Sale type</label>
+        <select class="input" id="n-type">
+          <option value="instant">Instant sale (Buy now)</option>
+          <option value="auction">Auction (bids)</option>
+        </select>
+        <label class="label" for="n-duration">Listing time</label>
+        <select class="input" id="n-duration">
+          <option value="1">1 minute</option>
+          <option value="5">5 minutes</option>
+          <option value="60">1 hour</option>
+          <option value="1440" selected>24 hours</option>
+          <option value="4320">3 days</option>
+        </select>
+        <p class="note">When the time is up, an unsold NFT returns to your collection (an auction goes to the highest bidder).</p>
+        <p class="error" id="n-error" role="alert"></p>
+        <button class="btn btn--dark btn--block" type="submit">Create NFT</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/create.js"></script>
+</body>
+</html>

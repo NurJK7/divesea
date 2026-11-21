@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DiveSea — Discover and Create NFTs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="site-header"></header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <h1>Discover And Create NFTs</h1>
+        <p>Discover, Create and Sell NFTs On Our NFT Marketplace With Over Thousands Of NFTs And Get a <strong>$20 bonus</strong>.</p>
+        <div class="actions">
+          <a class="btn btn--dark" href="#explore">Explore More</a>
+          <a class="btn btn--light" href="create.html">Create NFT</a>
+        </div>
+        <dl class="stats">
+          <div><dt>Art Works</dt><dd>430K+</dd></div>
+          <div><dt>Creators</dt><dd>159K+</dd></div>
+          <div><dt>Collections</dt><dd>87K+</dd></div>
+        </dl>
+      </div>
+      <div class="hero__art">
+        <img class="hero__img hero__img--main" src="images/nft-blue.png" alt="NFT artwork">
+        <img class="hero__img hero__img--side" src="images/nft-orange.svg" alt="NFT artwork">
+      </div>
+    </section>
+
+    <section class="section section--gray" id="weekly">
+      <div class="container">
+        <h2 class="title title--muted">Weekly – Top NFT</h2>
+        <div class="slider" id="slider"></div>
+        <div class="arrows">
+          <button class="arrow" id="prev" type="button" aria-label="Previous">←</button>
+          <button class="arrow" id="next" type="button" aria-label="Next">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="collection">
+      <h2 class="title">Top Collection</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr><th>Collection</th><th>Volume</th><th>24h %</th><th>Floor Price</th><th>Owners</th><th>Items</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="who"><img src="images/nft-orange.svg" alt=""><span>Alex Ca.<small>By Alex</small></span></div></td><td>8,456</td><td class="up">+ 27.78%</td><td>3,5</td><td>2.2K</td><td>500</td></tr>
+            <tr><td><div class="who"><img src="images/nft-blue.png" alt=""><span>Juliya S.<small>By Juliya</small></span></div></td><td>4,780</td><td class="up">+ 27.78%</td><td>7,9</td><td>3.4K</td><td>900</td></tr>
+            <tr><td><div class="who"><img src="images/nft-orange.svg" alt=""><span>Alex Ca.<small>By Alex</small></span></div></td><td>8,456</td><td class="up">+ 27.78%</td><td>3,5</td><td>2.2K</td><td>500</td></tr>
+            <tr><td><div class="who"><img src="images/nft-blue.png" alt=""><span>Juliya S.<small>By Juliya</small></span></div></td><td>4,780</td><td class="up">+ 27.78%</td><td>7,9</td><td>3.4K</td><td>900</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container section" id="explore">
+      <h2 class="title">Explore Marketplace</h2>
+      <div class="toolbar">
+        <input class="input" id="filter-search" type="search" placeholder="Search by title" maxlength="40" aria-label="Search by title">
+        <select class="input" id="filter-type" aria-label="Sale type">
+          <option value="">All sale types</option>
+          <option value="instant">Buy now</option>
+          <option value="auction">Auction</option>
+        </select>
+        <select class="input" id="filter-sort" aria-label="Sort">
+          <option value="oldest">Default order</option>
+          <option value="newest">Newest first</option>
+          <option value="price_asc">Price: low to high</option>
+          <option value="price_desc">Price: high to low</option>
+        </select>
+      </div>
+      <p class="muted empty" id="grid-empty" hidden>No NFTs found.</p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="container section collector" id="collector">
+      <div>
+        <h2 class="title title--left"><span class="muted">Just Unleash –</span><br>Your Inner Collector</h2>
+        <ul class="checks">
+          <li>Best Seller All Around World</li>
+          <li>$2M+ Transactions Every Day</li>
+          <li>Secure Transactions</li>
+          <li>Exclusive Collections From Sellers</li>
+          <li>Easy Buying and Selling</li>
+          <li>Join Our Community</li>
+        </ul>
+        <a class="btn btn--dark" href="#explore">Explore More →</a>
+      </div>
+      <aside class="sellers" aria-label="Best sellers">
+        <h3>Best Sellers</h3>
+        <ul>
+          <li><img src="images/nft-orange.svg" alt=""><span>Alex Ca.<small>@Alexy</small></span><button class="follow" type="button">Follow</button></li>
+          <li><img src="images/nft-blue.png" alt=""><span>Juliya Sa.<small>@Juliya9</small></span><button class="follow" type="button">Follow</button></li>
+          <li><img src="images/nft-pink.png" alt=""><span>Trevor Pu.<small>@TrevorP</small></span><button class="follow" type="button">Follow</button></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="container" id="cta">
+      <div class="cta">
+        <div>
+          <h2>Create and Sell NFTs</h2>
+          <p>World’s Largest NFT Place</p>
+          <div class="actions">
+            <a class="btn btn--white" href="#explore">Explore More</a>
+            <a class="btn btn--outline" href="create.html">Sell Artwork</a>
+          </div>
+        </div>
+        <img class="cta__img" src="images/nft-blue.png" alt="NFT artwork">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__box">
+      <button class="modal__close" id="modal-close" type="button" aria-label="Close">×</button>
+      <h2 id="modal-title">History of Bid</h2>
+      <p class="modal__sub" id="modal-sub"></p>
+      <ul class="bids" id="bids"></ul>
+      <button class="btn btn--dark btn--block" id="buy-btn" type="button" hidden>Buy now</button>
+      <form id="bid-form" novalidate>
+        <label for="bid-amount">Your Bid</label>
+        <div class="bid-field" id="bid-field">
+          <select aria-label="Currency"><option>ETH</option></select>
+          <input id="bid-amount" type="text" inputmode="decimal" placeholder="0.00" autocomplete="off">
+        </div>
+        <button class="btn btn--dark btn--block" type="submit">Submit</button>
+      </form>
+      <p class="error" id="modal-msg" role="alert"></p>
+      <a class="btn btn--light btn--block" id="profile-link" href="profile.html" hidden>Open my profile</a>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
