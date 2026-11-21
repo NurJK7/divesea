@@ -7,6 +7,6 @@
 [[redirects]]
   from = "/api/*"
   # ВАЖНО: замените адрес на адрес вашего сервера на Render
-  to = "https://REPLACE-WITH-YOUR-APP.onrender.com/api/:splat"
+  to = "https://divesea-api.onrender.com/api/:splat"
   status = 200
   force = true
