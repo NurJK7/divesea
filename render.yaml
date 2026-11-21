@@ -1,0 +1,18 @@
+# Render Blueprint: описывает сервер (Node.js + Express + SQLite)
+services:
+  - type: web
+    name: divesea-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: STARTING_BALANCE
+        value: "10"
+      - key: CORS_ORIGIN
+        sync: false   # Render спросит значение: адрес сайта на Netlify, например https://divesea.netlify.app

@@ -1,0 +1,12 @@
+# Netlify: раздаёт папку public и перенаправляет запросы /api на сервер (Render).
+# Браузер при этом видит один домен, поэтому cookie входа работают без дополнительных настроек.
+
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/api/*"
+  # ВАЖНО: замените адрес на адрес вашего сервера на Render
+  to = "https://REPLACE-WITH-YOUR-APP.onrender.com/api/:splat"
+  status = 200
+  force = true
