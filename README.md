@@ -2,8 +2,8 @@
 
 Фронтенд (HTML/CSS/JS) + бэкенд на Node.js (Express) + база данных SQLite.
 
-**Публичная ссылка на сайт:** `https://ВСТАВЬТЕ-ССЫЛКУ-NETLIFY.netlify.app`
-**Сервер (API):** `https://ВСТАВЬТЕ-ССЫЛКУ-RENDER.onrender.com/api/health`
+**Публичная ссылка на сайт:** `https://divesea-dmxr.netlify.app`
+**Сервер (API):** `https://https://divesea-api.onrender.com/api/health`
 
 ## Запуск локально
 1. Установи Node.js 22.13 или новее (рекомендуется 24): https://nodejs.org
